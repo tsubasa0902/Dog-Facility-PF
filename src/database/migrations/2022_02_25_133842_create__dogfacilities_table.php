@@ -19,6 +19,8 @@ class CreateDogfacilitiesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->unsignedBigInteger('category_id');
+            $table->string('price');
+            $table->string('opening hours');
             $table->string('summary');
             $table->string('url');
             $table->timestamps();
