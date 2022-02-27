@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDogfacilityTable extends Migration
+class CreateDogfacilitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDogfacilityTable extends Migration
      */
     public function up()
     {
-        Schema::create('Dogfacility', function (Blueprint $table) {
+        Schema::create('dogfacilities', function (Blueprint $table) {
             //カラム追加
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
@@ -25,7 +25,7 @@ class CreateDogfacilityTable extends Migration
             $table->softDeletes();
 
             //外部キー制約カラム追加
-            $table->foreign('user_id')->references('id')->on('user')->OnDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->OnDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->OnDelete('cascade');
         });
     }
@@ -37,6 +37,6 @@ class CreateDogfacilityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Dogfacility');
+        Schema::dropIfExists('dogfacilities');
     }
 }
