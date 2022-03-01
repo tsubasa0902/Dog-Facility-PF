@@ -14,7 +14,7 @@ class CommentsTableSeeder extends Seeder
     {
         DB::table('comments')->insert([
                 'user_id' => '1',
-                'dogfacility_id' => '4',
+                'dogfacility_id' => '1',
                 'comment' => 'そこのスポットいいですね、また行ってみます。',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
