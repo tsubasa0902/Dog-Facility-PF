@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\DogfacilityRequest;
 use App\Dogfacility;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
@@ -37,9 +38,20 @@ class DogfacilityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DogfacilityRequest $request)
     {
-        //
+        $dogfacility = new Dogfacility;
+
+        $dogfacility->title = $request->title;
+        $dogfacility->category_id = $request->category_id;
+        $dogfacility->openinghours = $request->openinghours;
+        $dogfacility->summary = $request->summary;
+        $dogfacility->url = $request->url;
+        $dogfacility->user_id = Auth::id();
+
+        $dogfacility->save();
+
+        return redirect()->route('dogfacilities.index');
     }
 
     /**
