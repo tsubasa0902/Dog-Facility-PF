@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dogfacility extends Model
 {
-    protected $fillable = ['user_id', 'title', 'category_id', 'price', 'opening hours', 'summary', 'url',];
+    use SoftDeletes;
+    
+    protected $fillable = ['user_id', 'title', 'category_id', 'price', 'openinghours', 'summary', 'url',];
 
     public function user()
     {

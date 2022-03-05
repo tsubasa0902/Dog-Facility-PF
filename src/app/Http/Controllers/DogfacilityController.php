@@ -17,9 +17,9 @@ class DogfacilityController extends Controller
      */
     public function index()
     {
-        $Dogfacilities = Dogfacility::all();
+        $dogfacilities = Dogfacility::all();
 
-        return view('dogfacilities.index', ['dogfacilities' => $dogfacility]);
+        return view('dogfacilities.index', ['dogfacilities' => $dogfacilities]);
     }
 
     /**
