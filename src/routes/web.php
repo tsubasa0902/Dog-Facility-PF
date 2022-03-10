@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::get('/', 'DogfacilityController@index')->name('dogfacilities.index');
+Route::get('/', 'dogfacilityController@index')->name('dogfacility.index');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dogfacility/create', 'DogfacilityController@create')->name('dogfacility.create');

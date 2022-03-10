@@ -51,7 +51,7 @@ class DogfacilityController extends Controller
 
         $dogfacility->save();
 
-        return redirect()->route('dogfacilities.index');
+        return redirect()->route('dogfacility.index');
     }
 
     /**
@@ -62,7 +62,7 @@ class DogfacilityController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('dogfacilities.show');
     }
 
     /**
