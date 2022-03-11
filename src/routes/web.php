@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::get('/', 'dogfacilityController@index')->name('dogfacility.index');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('dogfacility/create', 'DogfacilityController@create')->name('dogfacility.create');
+    Route::post('dogfacility/store', 'DogfacilityController@store')->name('dogfacility.store');
 });
