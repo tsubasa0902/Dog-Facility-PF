@@ -11,11 +11,15 @@
 |
 */
 
-Auth::routes();
+Route::get('/top', function () {return view('top');});
+# ゲストユーザーログイン
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
+Auth::routes();
 Route::get('/', 'dogfacilityController@index')->name('dogfacility.index');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('dogfacility/create', 'DogfacilityController@create')->name('dogfacility.create');
     Route::post('dogfacility/store', 'DogfacilityController@store')->name('dogfacility.store');
+    Route::get('user', 'UserController@show')->name('user.show');
 });
