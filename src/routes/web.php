@@ -11,8 +11,11 @@
 |
 */
 
-Auth::routes();
+Route::get('/top', function () {return view('top');});
+# ゲストユーザーログイン
+Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
+Auth::routes();
 Route::get('/', 'dogfacilityController@index')->name('dogfacility.index');
 
 Route::group(['middleware' => 'auth'], function () {
