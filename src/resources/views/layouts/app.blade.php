@@ -30,6 +30,9 @@
                         <a href=" {{ route('dogfacility.create')}}" class="nav-link"><i class="fas fa-pen">投稿する</i></a>
                     </li>
                     <li class="nav-item">
+                        <a href=" {{ route('user.show')}}" class="nav-link"><i class="fas fa-pen">マイページ</i></a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();document.getElementById('logout-form').submit();">ログアウト</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" name="logout">
                     @csrf
