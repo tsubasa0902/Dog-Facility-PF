@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/mypage.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 
     <!-- CSRF Token -->
@@ -58,9 +58,15 @@
     </div>
 </div>
 </nav>
+</header>
         <main class="">
             @yield('content')
         </main>
     </div>
 </body>
+<footer class="py-2 bg-dark">
+    <div class="container">
+        <p class="text-white text-center mt-2">Copyright © 2022 Tsubasa Ushikai All Rights Reserved.</p>
+    </div>
+</footer>
 </html>
