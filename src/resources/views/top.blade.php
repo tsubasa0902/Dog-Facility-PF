@@ -35,10 +35,10 @@
   </div>
 </div>
 
-<div class="test">
+<div class="about-register">
   <div class="container py-5">
     <div class="col-md-12">
-      <h2 class="font-weight-bold text-center">Dogfacilityで情報共有しませんか？</h2>
+      <h2 class="font-weight-bold text-center">Dogfacilityで愛犬と一緒に情報共有しませんか？</h2>
     </div>
     <div class="row form-group justify-content-center mt-4 mb-1">
       <a href=" {{ route('login.guest')}}" class="btn btn-lg btn-secondary mr-5">ゲストログイン</a>

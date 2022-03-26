@@ -22,6 +22,7 @@
 </head>
 <body>
     <div id="app">
+        <div class='fixed-top'>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('dogfacility.index') }}">Dogfacility</a>
@@ -54,7 +55,8 @@
                 <a class="nav-link" href=" {{ route('register')}}" tabindex="-1" aria-disabled="true">会員登録</a>
             </li>
         </ul>
-        @endif
+            @endif
+        </div>
     </div>
 </div>
 </nav>
