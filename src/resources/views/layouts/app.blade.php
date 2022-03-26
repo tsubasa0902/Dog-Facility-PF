@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/mypage.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 
     <!-- CSRF Token -->
@@ -22,7 +22,8 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class='fixed-top'>
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
                 <a class="navbar-brand" href="{{ route('dogfacility.index') }}">Dogfacility</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,13 +55,20 @@
                 <a class="nav-link" href=" {{ route('register')}}" tabindex="-1" aria-disabled="true">会員登録</a>
             </li>
         </ul>
-        @endif
+            @endif
+        </div>
     </div>
 </div>
 </nav>
+</header>
         <main class="">
             @yield('content')
         </main>
     </div>
 </body>
+<footer class="py-2 bg-dark">
+    <div class="container">
+        <p class="text-white text-center mt-2">Copyright © 2022 Tsubasa Ushikai All Rights Reserved.</p>
+    </div>
+</footer>
 </html>
