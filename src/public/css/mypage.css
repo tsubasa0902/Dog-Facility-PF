@@ -2,6 +2,10 @@
   background-color: beige;
 }
 
+.test {
+  background: #ecf7fb;
+}
+
 @media screen and (max-width: 768px) {
   .about2 {
       display: flex;
