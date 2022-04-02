@@ -35,6 +35,8 @@
   </div>
 </div>
 
+@if(Auth::check())
+@else
 <div class="about-register">
   <div class="container py-5">
     <div class="col-md-12">
@@ -44,6 +46,7 @@
       <a href=" {{ route('login.guest')}}" class="btn btn-lg btn-secondary mr-5">ゲストログイン</a>
       <a href=" {{ route('register')}}" class="btn btn-lg btn-secondary ">会員登録</a>
     </div>
+    @endif
   </div>
 </div>
 @endsection
