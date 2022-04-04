@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title', 'topページ')
+@section('top')
 <div class="full-page">
   <div class="mb-5">
     <img class="top-img" src="/images/dog01.jpeg" alt="">
