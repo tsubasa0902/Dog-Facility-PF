@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dogfacility extends Model
 {
-    use SoftDeletes;
+    
 
     protected $table = 'dogfacilities';
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Dogfacility;
 
 class DogfacilitiesTableSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class DogfacilitiesTableSeeder extends Seeder
                 'category_id' => '1',
                 'title' => 'ドッグラン',
                 'price' => '1500',
-                'opening hours' => '8:00~17:00',
+                'integer' => '8:00~17:00',
                 'summary' => 'ここは大型犬も小型犬もみんなで楽しめるスポットです。',
                 'url' => 'https://www.google.co.jp/',
                 'created_at' => date('Y-m-d H:i:s'),
