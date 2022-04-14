@@ -8,6 +8,7 @@ use App\Dogfacility;
 use App\Category;
 use Illuminate\Support\Facades\Auth;
 
+
 class DogfacilityController extends Controller
 {
     /**
@@ -17,8 +18,7 @@ class DogfacilityController extends Controller
      */
     public function index()
     {
-        $dogfacilities = Dogfacility::all();
-
+        $dogfacilities = Dogfacility::with('user')->orderBy('created_at', 'desc')->paginate(2);
         return view('dogfacilities.index', ['dogfacilities' => $dogfacilities]);
     }
 
