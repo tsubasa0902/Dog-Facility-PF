@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dogfacility extends Model
 {
-    use SoftDeletes;
     
+
+    protected $table = 'dogfacilities';
+
     protected $fillable = ['user_id', 'title', 'category_id', 'price', 'openinghours', 'summary', 'url',];
 
     public function user()
